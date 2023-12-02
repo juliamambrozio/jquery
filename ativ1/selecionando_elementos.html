@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Selecionando elementos HTML</h1>
+    <div>Div 1</div>
+    <div class="diversos1">Div 2</div>
+    
+    <ul>
+        <li>Menu - ítem 1</li>
+        <li>Menu - ítem 2</li>
+        <li>Menu - ítem 3</li>
+    </ul>
+
+    <ul>
+        <li class="item_menu_2">Menu 2 - ítem 1</li>
+        <li class="item_menu_2">Menu 2 - ítem 2</li>
+        <li class="item_menu_2">Menu 2 - ítem 3</li>
+    </ul>
+
+    <input type="text" name="" id="" placeholder="campo 1">
+
+    <select name="" id="">
+        <option value="">Selecione uma opção</option>
+        <option value="">Opção 1</option>
+        <option value="">Opção 2</option>
+    </select>
+
+    <img src="https://static.todamateria.com.br/upload/sh/ut/shutterstock1411747946-cke.jpg" alt="" id="img">
+
+    <script>
+        //SELEÇÃO DE ELEMENTOS: Tags, Class e ID
+        console.log($('h1')) //$ = seleção de elementos, executar ações da biblioteca
+        console.log($('.item_menu_2'))
+
+        console.log($('#img'))
+    </script>
+  
+</body>
+</html>
