@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+
+        //AMBOS SERVEM PARA A MESMA COISA
+
+        $(document).ready(function(){
+            function teste(){
+            console.log($('.exemplo'))
+        }
+        }) //ready = ação que se inicia assim que carregar a página
+
+        $(function() {
+           
+            console.log($('.exemplo'))
+        })
+
+
+        
+    </script>
+</head>
+<body>
+    <div class="exemplo">Teste</div>
+</body>
+</html>
