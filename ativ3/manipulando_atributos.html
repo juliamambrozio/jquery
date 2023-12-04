@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+        
+
+        $(document).ready(function(){
+            console.log($('img').attr('src')) //primeiro: recupera valor
+            //segundo: substituí valor
+            $('img').attr('src','imagens/esfera_2.png')
+        }
+        ) 
+    </script>
+
+    <img src="imagens/esfera_1.png" alt="" style="border:5px solid black;"> <!-- atributo: todos que estão associados a tag, ex: src, alt, style, etc-->
+</body>
+</html>
