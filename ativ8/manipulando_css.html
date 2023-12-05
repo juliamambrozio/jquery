@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+
+		<style>
+			.campo{
+				background-color: grey;
+				padding: 10px;
+				color: white;
+			}
+		</style>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+			//EDITANDO CSS
+			$('#topo').css({'background': '#155661', 'margin': '0px', 'padding': '10px'})
+
+			//EDITANDO CLASS
+			$('input').addClass('campo')
+
+			//VERIFICAR SE A CLASS EXISTE NO ELEMENTO
+			$('textarea').hasClass('padrao')
+
+			//REMOVER CLASS
+			$('textarea').removeClass('erro')
+		</script>
+	</head>
+
+	<body>
+		
+		<div id="topo">
+			<h1>Barra de navegação da aplicação</h1>
+		</div>
+
+		<div>
+			<h3>Contato</h3>
+			<hr />
+
+			<p>Nome:</p>
+			<input type="text" />
+			<br />
+
+			<p>Email:</p>
+			<input type="text" />
+			<br />
+
+			<p>Mensagem:</p>
+			<textarea></textarea>
+			<br />
+
+			<button type="button">Enviar</button>
+		</div>
+	</body>
+
+</html>
