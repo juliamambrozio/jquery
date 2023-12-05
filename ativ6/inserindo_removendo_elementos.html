@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+
+			$(document).ready(() => {
+
+				//APPEND: insere no final, PREPEND: insere no começo (Dentro do conjunto)
+
+				$('#lista1').append('<li>Item 4</li>')
+
+				$('#lista1').prepend('<li>Item 1</li>')
+
+				//INSERINDO APÓS A DIV (fora do conjunto)
+
+				$('#lista1').after('<p>Eu fui inserido após a div</p>')
+				$('#lista1').before('<p>Eu fui inserido antes da div</p>')
+
+				//SUBSTITUINDO TODO O CONTEÚDO
+
+				$('#lista1').html('<p>Eu substitui todo o conteúdo')
+				
+				$('.item2').remove()
+
+			})
+
+		</script>
+	</head>
+
+	<body>
+		
+		<ul id="lista1">
+			<li>Item 1</li>
+			<li class="item2">Item 2</li>
+			<li>Item 3</li>
+		</ul>
+
+		<div id="lista2">
+			<div>Item 1</div>
+			<div class="item2">Item 2</div>
+			<div>Item 3</div>
+		</div>
+
+		<hr id="linha" />
+
+	</body>
+
+</html>
