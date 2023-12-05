@@ -16,6 +16,26 @@
 
 			})
 
+			$(document).ready(() => {
+
+                
+				
+				console.log($('.sexo:checked').val()) //selecionando o que está marcado e seu valor
+
+			})
+
+			$(document).ready(() => {
+
+			console.log($('#interesse:checked')) //selecionando o que está marcado e seu valor
+
+			//LAÇO DE REPETIÇÃO para recuperar o valor (val só recupera o valor do primeiro marcado, e não de todos)
+			
+			//parâmetros: array, callback-índice e valor
+			$.each($('#interesse:checked'), (indice, valor) => {
+				console.log(indice.value, valor.value)
+			})
+})
+
 		</script>
 	</head>
 
@@ -32,8 +52,16 @@
 			<option value="3">Rádio</option>
 			<option value="4">Outros meios</option>
 		</select>
-		
 
+		<p>Sexo:</p>
+		<input type="radio" name="sexo" id="sexo" value="f">Feminino <br>
+		<input type="radio" name="sexo" id="sexo" value="m"> Masculino <br>
+		
+		<p>Interesses:</p>
+		<input type="checkbox" name="interesse" id="interesse" value="php"> PHP <br>
+		<input type="checkbox" name="interesse" id="interesse" value="js"> JavaScript <br>
+		<input type="checkbox" name="interesse" id="interesse" value="angular"> Angular <br>
+		<input type="checkbox" name="interesse" id="interesse" value="nodejs"> NodeJS <br>
 	</body>
 
 </html>
