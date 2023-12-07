@@ -17,6 +17,10 @@
 				width: 80px;
 				height: 80px;
 			}
+
+			.inputFocado{
+				background-color: red;
+			}
 			
 		</style>
 
@@ -148,13 +152,36 @@
 						}
 					})
 
+					//FORMULÁRIO
+
+					//quando é focado
+					$('#nome').focus((e) => {
+						console.log('Esse elemento HTML foi focado')
+						$(e.target).addClass('inputFocado')
+					})
+
+					//quando perde o foco
+					$('#nome').blur((e) => {
+						console.log('Esse elemento HTML perdeu o foco')
+						$(e.target).removeClass('inputFocado')
+					})
+
+					//valor mudado
+
+					$('#opcao').change((e) => {
+						console.log($(e.target).val())
+						
+						
+					})
+
+					$('#form').submit((e) => {
+						e.preventDefault() //evita que envie quando não existir (evitar as ações padrão que normalmente ocorrem quando certos eventos são acionados)
+						console.log('Form enviado')
+					})
 
 
 
-
-
-
-
+					
 
 			})
 		</script>
@@ -195,21 +222,21 @@
 			<hr />
 
 			<h3>Formulário</h3>
-			<form>
+			<form id="form">
 				<span>Nome:</span>
-				<input type="text" />
+				<input type="text" id="nome" />
 
 				<span>E-mail:</span>
-				<input type="text" />
+				<input type="text" id="email" />
 
 				<span>Motivo do contato:</span>
-				<select>
+				<select id="opcao">
 					<option value="">-- Selecione --</option>
 					<option value="duvida">Dúvida</option>
 					<option value="sugestao">Sugestão</option>
 				</select>
 				
-				<button type="button">Enviar</button>
+				<button type="submit">Enviar</button>
 			</form>
 		</div>
 	</body>
