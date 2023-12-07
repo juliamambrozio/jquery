@@ -108,7 +108,47 @@
 						$('#resultadoDiv2').html('Saiu')
 					})
 
-					
+					//TECLADO
+
+					//quando pressiona a tecla
+					$('#teclado').keydown(() => {
+						
+						$('#resultadoTecla').html('Tecla pressionada')
+					})
+
+					$('#teclado').keyup((e) => {
+						
+						$('#resultadoTecla').html('Tecla liberada')
+						console.log(e.keyCode) //pegando código da tecla
+					})
+
+					//Permitindo a digitação de caracteres específicos
+
+					$('#teclado').keyup((e) => {
+						
+						if(e.keyCode < 49 || e.keyCode > 52){
+							let txt = $(e.target).val() //recuperando valor
+							txt = txt.slice(0, -1) //removendo último caracter se não for esses valores
+
+							$(e.target).val(txt)
+						}
+					})
+
+					//Recuperando valor do campo
+					$('#teclado').keyup((e) => {
+						
+						if(e.keyCode == 13){
+
+							let txt = $(e.target).val()
+
+							$('#resultadoTecla').html(txt)
+
+
+	
+						}
+					})
+
+
 
 
 
