@@ -5,6 +5,18 @@
 		<title>jQuery</title>
 
 		<style>
+			#divExterna{
+				background-color: black;
+				width: 80px;
+				height: 80px;
+				padding: 80px;
+			}
+
+			#divInterna{
+				background-color: rgb(165, 24, 24);
+				width: 80px;
+				height: 80px;
+			}
 			
 		</style>
 
@@ -24,6 +36,86 @@
 					$(window).resize(()=>{
 						$('#resize').html('Página redimensionada')
 					})
+
+					//MOUSE
+
+					//quando pressiona
+
+					$('#btn1').mousedown(() =>{
+						$('#div2').css('background-color','green')
+					})
+
+					//quando solta
+
+					$('#btn1').mouseup(() =>{
+						$('#div2').css('background-color','pink')
+					})
+
+					//quando clica
+
+					//$('#btn1').click(() =>{
+						//$('#div2').css('background-color','blue')
+					//})
+
+					//duplo click
+
+					$('#btn2').dblclick(() =>{
+						$('#div2').css('background-color','blue')
+					})
+
+					//movendo mouse
+
+					$('#div2').mousemove((e) => {
+						
+						$('#resultadoDiv').html('X:' + e.offsetX + '/ Y:' + e.offsetY)
+					})
+
+					//quando sobrepõe o elemento (Tem efeito bubble, ou seja, quando há uma hierarquia ele precisa sair do elemento pai, pra entrar novamente nele e no filho))
+
+					/* $('#divExterna').mouseover(() => {
+						
+						$('#resultadoDiv1').html('Entrou')
+					}) */
+
+					//mesmo resultado do mouseover (mas é um código mais novo)
+
+					$('#divExterna').mouseenter(() => {
+						
+						$('#resultadoDiv1').html('Entrou')
+					}) 
+
+					$('#divInterna').mouseenter(() => {
+						
+						$('#resultadoDiv2').html('Entrou')
+					}) 
+
+					//quando para de sobrepor o elemento (Tem efeito bubble, ou seja, quando há uma hierarquia ele precisa sair do elemento pai, pra entrar novamente nele e no filho))
+
+					/* $('#divExterna').mouseout(() => {
+						
+						$('#resultadoDiv1').html('Saiu')
+					}) */
+
+					//tem o mesmo efeito do mouseout (mas é um código mais novo)
+
+					$('#divExterna').mouseleave(() => {
+						
+						$('#resultadoDiv1').html('Saiu')
+					})
+					
+					$('#divInterna').mouseleave(() => {
+						
+						$('#resultadoDiv2').html('Saiu')
+					})
+
+					
+
+
+
+
+
+
+
 			})
 		</script>
 	</head>
@@ -42,16 +134,24 @@
 			<hr />
 
 			<h3>Mouse</h3>
-			<button type="button">Clique aqui</button>
-			<button type="button">Clique aqui 2x</button>
-			<div style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
-			<span>Resultado do evento sobre a div</span>
+			<button type="button" id="btn1">Clique aqui</button>
+			<button type="button" id="btn2">Clique aqui 2x</button>
+			<div style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px" id="div2"></div>
+			<span>Resultado do evento sobre a div</span><span id="resultadoDiv"></span>
+
+			<div id="divExterna">
+				<div id="divInterna"></div>
+			</div>
+			<span>Div Externa: <span id="resultadoDiv1"></span></span>
+			<br>
+			<span>Div Interna: 
+			<span id="resultadoDiv2"></span></span>
 			<hr />
 
 			<h3>Teclado</h3>
 			<span>Nome:</span>
-			<input type="text" />
-			<span>Resultado do evento sobre o input</span>
+			<input type="text" id="teclado"/>
+			<span id="resultadoTecla">Resultado do evento sobre o input</span>
 			<hr />
 
 			<h3>Formulário</h3>
