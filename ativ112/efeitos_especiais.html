@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+
+		<style>
+			button {
+				margin-bottom: 5px;
+				width: 100px;
+			}
+
+			.div {
+				width: 100px;
+				height: 100px;
+			}
+
+			.div1 {
+				background-color: red
+			}
+
+			.div2 {
+				background-color: green
+			}
+
+			.div3 {
+				background-color: blue
+			}
+
+			.grupo {
+				padding: 25px;
+				float: left
+			}
+		</style>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(() => {
+                $('#btn1').on('click', ()=>{
+                //esconde
+                //$('#div1').hide()//slow, medio fast (velocidade de transição) (pode ser valor numérico também, ex: 2000 (2s))
+                //exibe
+                //$('#div1').show() //slow, medio fast (velocidade de transição)
+                //alterna
+                $('#div1').toggle('slow') //slow, medio fast (velocidade de transição)
+                })
+
+                $('#btn2').on('click', ()=>{
+                //fadeOut: efeito de opacidade de sumir
+                //fadeIn: efeito de opacidade de exibir
+                //fadeTo('tempo', nível): leva pra um nível específico de opacidade (de 0 a 1)
+
+                $('#div2').fadeToggle('slow')
+                })
+
+                $('#btn3').on('click', ()=>{
+                //slideUp: desaparece fazendo efeito para cima
+                //slideDown: desaparece fazendo efeito para baixo
+
+                $('#div3').slideToggle() //para cima e para baixo
+                })
+
+				
+			})
+		</script>
+	</head>
+
+	<body>
+		
+		<div class="grupo">
+			<button type="button" id="btn1">DIV 1</button>
+			<div id="div1" class="div div1"></div>
+		</div>
+
+		<div class="grupo">
+			<button type="button" id="btn2">DIV 2</button>
+			<div id="div2" class="div div2"></div>
+		</div>
+
+		<div class="grupo">
+			<button type="button" id="btn3">DIV 3</button>
+			<div id="div3" class="div div3"></div>
+		</div>
+			
+	</body>
+
+</html>
