@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <style>
+        #div1{
+            border: 1px solid black;
+            width: 80px;
+            height: 80px;
+        }
+
+        #div2{
+            border: 1px solid rgb(0, 42, 255);
+            width: 80px;
+            height: 80px;
+        }
+
+        .emDestaque{
+            background-color: rgb(255, 0, 0);
+        }
+    </style>
+    <script>
+        $(document).ready(() =>{
+            $('#btn2').on('click', () =>{
+                alert('Botão 2 clicado')
+            })
+
+            $('#btn1').on('click',() => {
+                $('#btn2').trigger('click') //aciona evento de modo programático, acionando evento do outro click
+            })
+
+            //EFEITO DE HOVER
+
+           $('#div1').hover(
+            //quando passa o mosue
+            e => $(e.target).addClass('emDestaque'),
+            //quando tira o mouse
+            e => $(e.target).removeClass('emDestaque')  
+        )
+
+        //TOGGLE
+        $('#div2').toggleClass('emDestaque') //a cada ação feita, é removido e colocado a class (pode ser usado no hover)
+        })
+    </script>
+</head>
+<body>
+    <button id="btn1" type="button">BTN 1</button>
+    <button id="btn2" type="button">BTN 2</button>
+
+    <hr>
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+</html>
