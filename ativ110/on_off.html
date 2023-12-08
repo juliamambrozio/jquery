@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <style>
+        .desfocado{
+            background-color: white;
+        }
+
+        .focado{
+            background-color: pink;
+        }
+
+    </style>
+    <script>
+        //ON: atribui eventos a elementos HTML
+        //OFF: remove eventos HTML
+
+        $(document).ready(() => {
+            $('body').on('focus', 'input', e =>{
+                $(e.target).removeClass('desfocado')
+
+                $(e.target).addClass('focado')
+            })
+
+            $('body').on('blur', 'input', e =>{ //aplicar em qualquer input que esteja no body
+                $(e.target).removeClass('focado')
+
+                $(e.target).addClass('desfocado')
+            })
+            $('body').append('<br><br> <input type="text" class="desfocado"/>') 
+
+            //OFF
+
+            $('body').off('blur', 'input') //removendo efeito de blur
+        })    
+        </script>
+</head>
+<body>
+    <input type="text" name="" id="" class="desfocado">
+</body>
+</html>
