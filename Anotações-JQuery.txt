@@ -1,0 +1,37 @@
+APP DASHBOARD: load(), get(), post() - requisições
+Carregando conteúdo de outra página com as requisições de forma síncrona, 
+criando classes para manipulação de dados (conexão como bd, instanciando obj,
+manipulando dados), requisição síncrona, tag de contagem de dias, transformando
+HTML para JSON virando um obj literal
+
+--------------------------------------------------------------
+JQuery: Biblioteca de JavaScript
+
+Diversos recursos prontos
+- selecionar elementos HTML
+- navegação pelo DOM
+- manipulação CSS
+- eventos
+- efeitos e animações
+- Ajax
+- plugins
+
+-ativ1- selecionando elementos do HTML $('')
+-ativ2- sequência de execução
+-ativ3- manipulando atributos das tags
+-ativ4- manipulando conteúdo html
+-ativ5- manipulando valores de inputs
+-ativ6- removendo e inserindo conteúdos
+-ativ7- navegando por elementos
+-ativ8- manipulando o CSS
+EVENTOS
+-ativ9- eventos no browser (scroll, diminuir ou aumentar a tela), eventos do 
+mouse, teclado (todos os eventos principais, permitindo certos caracteres,
+recuperando valor do campo), eventos de formulário (caso queira colocar o 
+mesmo evento em vários elementos, é só colocar uma vírgula ex: $(#div1, #div2))
+-ativ10- registrando e removendo eventos (on e off)
+-ativ11- disparando eventos de forma programática (trigger, hover, toggle)
+-ativ12: transições (exibir, opacidade e slide para cima e para baixo)
+-ativ13: animação
+-ativ14- serialize (pegar todo o form e converter para uma url), passando o name 
+para um array
